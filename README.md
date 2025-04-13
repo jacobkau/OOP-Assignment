@@ -1,7 +1,10 @@
 # OOP-Assignment completed
 #Activity 1
 #i
+
+
 class Smartphone:
+
     def __init__(self, brand, model, properties):
         self.brand = brand
         self.model = model
@@ -12,6 +15,7 @@ class Smartphone:
 
 #ii
 class GamingPhone(Smartphone):
+
     def __init__(self, brand, model,properties, gpu):
         super().__init__(brand,properties, model)
         self.__gpu = gpu  # Encapsulated attribute
@@ -21,18 +25,22 @@ class GamingPhone(Smartphone):
 
 #Activity 2
 class Animal:
+
     def move(self):
         pass
 class snake(Animal):
+
     def move(self):
         return "crawling"
 class Bird(Animal):
+
     def move(self):
         return "Flying"
 class frog(Animal):
+
     def move(self):
         return "jumping"
-# Testing polymorphism
+        
 animals = [snake(), Bird(), frog()]
 for a in animals:
     print(a.move())
