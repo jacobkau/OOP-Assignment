@@ -6,6 +6,7 @@ class Smartphone:
         self.brand = brand
         self.model = model
         self.properties = properties
+        
     def specs(self):
         return f"{self.brand} {self.model} {self.properties} is a powerful smartphone."
 
@@ -14,6 +15,7 @@ class GamingPhone(Smartphone):
     def __init__(self, brand, model,properties, gpu):
         super().__init__(brand,properties, model)
         self.__gpu = gpu  # Encapsulated attribute
+        
     def specs(self):
         return f"{self.brand} {self.model} {self.properties} has a high-end GPU: {self.__gpu}."
 
